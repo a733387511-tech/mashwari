@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --font-sans: "Inter", "Cairo", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #2563EB;
+  --color-surface: #FFFFFF;
+  --color-background: #F0F2F5;
+  --color-text-main: #1A1C1E;
+  --color-text-muted: #64748B;
+  --color-border-light: #E2E8F0;
+  
+  --shadow-xl: 0 24px 48px rgba(0, 0, 0, 0.12);
+  --shadow-primary: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+@layer base {
+  html {
+    direction: rtl;
+  }
+  body {
+    @apply bg-background text-text-main antialiased overflow-x-hidden;
+    font-family: var(--font-sans);
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap');
